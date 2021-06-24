@@ -1,1 +1,24 @@
+import java.util.*; 
+public class GuessingGame { 
+public static void main(String[] args) {
+int usercount = 0;
+int machinecount = 0;
+Scanner sc = new Scanner(System.in); 
+Random r = new Random(); 
+int machineNum = r.nextInt(5) +1;
+int userNum = sc.nextInt(); 
+for (int i=1; i<=3; i++) { 
+System.out.println(machineNum);
+if (userNum == machineNum)
+usercount++;
+else
+machinecount++;
+String champion=(usercount==machinecount)?"U won!":"machine won!";
+System.out.println(champion);
+}
 
+String champ=(usercount>machinecount)?"U have won!":"machine has won!";
+System.out.println("champ");
+ sc.close(); 
+ }
+ }
