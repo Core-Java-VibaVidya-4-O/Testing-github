@@ -16,7 +16,6 @@ machinecount++;
 String champion=(usercount==machinecount)?"U won!":"machine won!";
 System.out.println(champion);
 }
-
 String champ=(usercount>machinecount)?"U have won!":"machine has won!";
 System.out.println("champ");
  sc.close(); 
