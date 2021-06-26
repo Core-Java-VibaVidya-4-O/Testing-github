@@ -1,46 +1,23 @@
-# import java.util.Arrays;
-import java.util.Scanner;
-
-public class Arraystest {
-public static void main(String[] args)
-{
-Scanner sc = new Scanner(System.in);
-System.out.println("Enter size of array : ");
-int size = sc.nextInt();
-int[] x = new int[size];
-System.out.println("Enter elements : ");
-for (int i=0; i<x.length; i++)        
-//one dimentional array
-{
- System.out.println("Enter element at index: "+i);
- x[i] = sc.nextInt();
-}                                     
-//for loop -> index
-
- for (int i=0; i<x.length; i++)
-{
- System.out.println(x[i]);
-} 
- System.out.println(Arrays.toString(x));
- 
- for (int i : x)             
-//two dimentional array
- System.out.println(i);      
-//for-each loop -> element
- int row = sc.nextInt();     
- int col = sc.nextInt();
- 
- int matrix[][] = new int[row][col];
- for (int i=0; i<row; i++)  
- {                          
- for (int j=0; j<col; j++)
- matrix[i][j] = sc.nextInt();
- }
- for (int i=0; i<row; i++)
- {
- for (int j=0; j<col; j++)
- System.out.println(matrix[i][j]);
- }
-sc.close();
-    }
-}
+         1+  import java.util.Arrays;
+        2 +import java.util.Scanner;
+        3 +
+        4 +public class ProblemArray {
+        5 +    public static void main(String[] args) {
+        6 +        Scanner sc = new Scanner(System.in);
+        7 +        int n = sc.nextInt();
+        8 +
+        9 +        int a[] = new int[n];
+       10 +        int mul=1;
+       11 +
+       12 +        for (int i=0; i<a.length; i++) {
+       13 +            a[i] = sc.nextInt();
+       14 +            mul=mul*a[i];
+       15 +        }
+       16 +
+       17 +        a[0]  = mul;
+       18 +
+       19 +        System.out.println(Arrays.toString(a));
+       20 +
+       21 +        sc.close();
+       22 +    }
+       23 +}            
